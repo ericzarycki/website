@@ -64,12 +64,11 @@ ul{
     letter-spacing: .2rem;
     text-align: center;
 }
-
 .cta:hover{
     color: white;
     background-color: darkgrey;
-    /* border: none; */
 }
+/* What is this? */
 .brand h1{
     font-size: 3rem;
     text-transform: uppercase;
@@ -262,24 +261,18 @@ ul{
     min-height: 100%;
     z-index: -1; 
 }
-
-
 /* End of Hero Section */
-
-
-
 
 /* Career Section */
 #career .career{
     flex-direction: column;
     background-color: black;
     text-align: center;
-    max-width: 1500px;
+    max-width: 1600px;
     margin: 0 auto;
     padding: 100px 0;
 }
 #career .career-top{
-    width: 500px;
     margin: 0 auto;
     text-align: center;
 }
@@ -385,11 +378,6 @@ ul{
         position: absolute;
         top: -30px;
     }
-    #career .section-title{
-        text-align: center;
-        justify-content: center;
-        margin: 0 auto auto 0;
-    }
 }
 .timeline-content .date{
     font-size: 13px;
@@ -410,13 +398,13 @@ ul{
     padding: 100px 0;
 }
 #education .education-top{
-    width: 500px;
     margin: 0 auto;
 }
 #education .section-title{
     color: black;
     letter-spacing: .2rem;
 }
+
 #education .education-bottom {
     flex-direction: row;
 	display: inline-flex;
