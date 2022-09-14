@@ -276,9 +276,9 @@ ul{
     margin: 0 auto;
     text-align: center;
 }
-#career .section-title{
+/* #career .section-title{
     text-align: center;
-}
+} */
 #career .career-bottom p{
     color: white;
     font-size: 1.4rem;
@@ -406,29 +406,38 @@ ul{
 }
 
 #education .education-bottom {
-    flex-direction: row;
-	display: inline-flex;
-	align-items: stretch;
+	display: flex;
+	align-items: top;
 	justify-content: center;
 	flex-wrap: wrap;
-	margin-top: 50px;
+	margin-top: 30px;
 }
-#education .education-item{
-    flex-basis: auto;
-    display: inline-block;
-    align-items: stretch;
-    text-align: center;
-    justify-content: center;
+#education .education-item {
+	flex-basis: 80%;
+	display: inline-block;
+	align-items: flex-start;
+	justify-content: center;
 	flex-direction: column;
-    flex-wrap: wrap;
+	padding: 20px;
+	border-radius: 10px;
+	margin: 10px 5%;
 	position: relative;
 	z-index: 1;
-    width: 33.33%;
 	overflow: hidden;
 }
+#education .education-item::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+}
+
 #education .education-item h1{
     font-size: 4rem;
     border: solid 1px;
+    text-align: center;
     border-color: black;
     font-weight: 500;
 }
@@ -886,6 +895,7 @@ ul{
     /* End of Hero */
 
     /* Education Section                                      ************** */
+    
 
     /* End of Education Section */
 
@@ -1030,7 +1040,6 @@ ul{
 /* End of Cursor */
 
 /* Media Query for Desktop */
-
 @media only screen and (min-width:1200px){
 /* Header */
 
@@ -1055,7 +1064,7 @@ ul{
 }
 /* End of Header */
 
-    #services .service-bottom .service-item{
+    #education .education-bottom .education-item{
         flex-basis: 22%;
         margin: 1.5%;
     }
