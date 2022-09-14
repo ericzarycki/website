@@ -414,8 +414,6 @@ ul{
     width: 500px;
     margin: 0 auto;
 }
-
-/* Special section title because of white background */
 #education .section-title{
     color: black;
     letter-spacing: .2rem;
@@ -435,13 +433,12 @@ ul{
     text-align: center;
     justify-content: center;
 	flex-direction: column;
-    padding: 20px;
+    flex-wrap: wrap;
 	position: relative;
 	z-index: 1;
     width: 33.33%;
 	overflow: hidden;
 }
-
 #education .education-item h1{
     font-size: 4rem;
     border: solid 1px;
@@ -901,12 +898,9 @@ ul{
     }
     /* End of Hero */
 
-    /* Service Section */
-    #services .service-bottom .service-item{
-        flex-basis: 45%;
-        margin: 2.5%;
-    }
-    /* End of Service Section */
+    /* Education Section                                      ************** */
+
+    /* End of Education Section */
 
     /* Project */
     #projects .project-item{
