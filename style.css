@@ -20,11 +20,6 @@ a{
     align-items: center;
     justify-content: center;
 }
-/* img{
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-} */
 video{
 	height: 100%;
 	width: 100%;
@@ -286,6 +281,10 @@ ul{
 #career .career-top{
     width: 500px;
     margin: 0 auto;
+    text-align: center;
+}
+#career .section-title{
+    text-align: center;
 }
 #career .career-bottom p{
     color: white;
@@ -294,9 +293,6 @@ ul{
     line-height: 2.5rem;
     font-weight: 300;
     letter-spacing: .05rem;
-}
-#career .career-bottom h1{
-    color: white;
 }
 #career .career-bottom{
     min-height: 100vh;
@@ -389,9 +385,12 @@ ul{
         position: absolute;
         top: -30px;
     }
-
+    #career .section-title{
+        text-align: center;
+        justify-content: center;
+        margin: 0 auto auto 0;
+    }
 }
-
 .timeline-content .date{
     font-size: 13px;
     font-weight: 300;
@@ -457,7 +456,6 @@ ul{
 #education .education-item ul{
     text-align: center;
 }
-deez
 /* End of Education Section */
 
 /* About Section */
@@ -471,6 +469,7 @@ deez
     margin: 0 auto;
     padding: 100px 20px;
 }
+/* Repetitive or helpful? */
 #about .section-title{
     font-size: 4rem;
     font-weight: 300;
@@ -933,18 +932,6 @@ deez
     }
     #about h1{
         color: black;
-    }
-    #about .col-left{
-        width: 600px;
-        height: 400px;
-        padding-left: 60px;
-    }
-    #about .about .col-left .about-img::after{
-        left: -45px;
-        top: 34px;
-        height: 98%;
-        width: 98%;
-        border: 10px solid crimson;
     }
     #about .col-right{
         text-align: left;
