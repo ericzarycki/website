@@ -517,6 +517,7 @@ ul{
 #contact .section-title{
     padding-bottom: 15px;
     color: white;
+    align-items: center;
 }
 #contact h2{
     color: white;
@@ -538,6 +539,7 @@ ul{
 #contact .wrapper .right{
     flex: 1;
 }
+/* Needs to be fixed lmao */
 #contact .wrapper .right{
     /* height: 100vh;
   width: 100%; */
@@ -555,6 +557,7 @@ ul{
 #contact .left .contact-desc{
     color: black;
     margin-bottom: 5rem;
+    align-items: center;
 }
 #contact .left .contact-info{
     margin-bottom: 5rem;
@@ -664,6 +667,26 @@ ul{
     100%{
         opacity: 0;
         pointer-events: none;
+    }
+}
+@media only screen and (max-width: 768px) {
+	#contact .wrapper {
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+	}
+	#contact .right {
+		width: 100%;
+	}
+	#contact .right .form-wrapper {
+		padding: 3rem;
+		width: 100%;
+		max-width: 100%;
+    }
+    #contact .left{
+        align-items: center;
+        text-align: center;
+        justify-content: center;
     }
 }
 #contact .contact{
@@ -878,8 +901,8 @@ ul{
 /* End of KeyFrames */
 
 /* Media Query for Tablet */
-@media only screen and (min-wdith: 760px){
-    .cta{
+@media only screen and (min-width: 760px){
+    /* .cta{
         font-size: 2.5rem;
         padding: 20px 60px;
 
@@ -893,11 +916,6 @@ ul{
         font-size: 7rem;
     }
     /* End of Hero */
-
-    /* Education Section                                      ************** */
-    
-
-    /* End of Education Section */
 
     /* Project */
     #projects .project-item{
@@ -921,11 +939,11 @@ ul{
 
     #projects .all-projects .project-img{
         height: 100%;
-    }
+    } 
     /* End of Project */
 
     /* About */
-    #about .about{
+    /* #about .about{
         flex-direction: row;
     }
     #about h1{
@@ -937,11 +955,11 @@ ul{
     }
     #about .col-right h1{
         text-align: left;
-    }
+    } */
     /* End About */
 
-    /* Contact */
-    #contact .contact{
+    /* Start of contact section */
+    /* #contact .contact{
         flex-direction: column;
         padding: 100px 0;
         align-items: center;
@@ -965,7 +983,7 @@ ul{
         padding: 3rem;
         width: 100%;
         max-width: 100%;
-    }
+    } */
     /* #contact .contact-items{
         width: 100%;
         display: flex;
@@ -977,13 +995,13 @@ ul{
         margin: 20px;
         flex-direction: row;
     } */
-    #contact .contact-item .icon{
+    /* #contact .contact-item .icon{
         height: 100px;
         width: 100px;
     }
     #contact .contact-item .icon img{
         object-fit: contain;
-    }
+    } */
     /* #contact .contact-item .contact-info{
         width: 100%;
         text-align: left;
@@ -1065,6 +1083,11 @@ ul{
 /* End of Header */
 
     #education .education-bottom .education-item{
+        flex-basis: 22%;
+        margin: 1.5%;
+    }
+
+    #contact .form-wrapper .right{
         flex-basis: 22%;
         margin: 1.5%;
     }
