@@ -19,7 +19,7 @@ hamburger.addEventListener('click', () => {
 document.addEventListener('scroll',() =>{
     var scroll_position = window.scrollY;
     if(scroll_position > 250){
-        header.style.backgroundColor = '#000000';
+        header.style.backgroundColor = '#FFFFFF';
     }else{
         header.style.backgroundColor = 'transparent';
     }
@@ -94,3 +94,32 @@ cardWrapper.addEventListener('mouseleave', () => {
 cardWrapper.onclick = function() {
   window.open('https://www.venmo.com/u/prodbyericcc', '_blank').focus();
 };
+
+
+// Nav bar
+const sections = document.querySelectorAll('section');
+const navLI = document.querySelectorAll('.header .nav-list .nav-bar ul li');
+
+window.addEventListener('scroll', ()=>{
+  let current = '';
+
+  sections.forEach((section)=> {
+
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+
+    if(window.scrollY >= (sectionTop - sectionHeight / 3)){
+      current = section.getAttribute('id');
+    }
+
+  });
+
+  navLI.forEach((li) => {
+    li.classList.remove('active');
+    if(li.classList.contains(current)){
+      li.classList.add('active');
+
+    }
+  });
+  console.log(current)
+});

@@ -1,4 +1,24 @@
+/* Deprecate this font */
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+/* New font is below */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Variables */
+:root{
+    --primary-color: #5E2BFF;
+    --secondary-black: #121212;
+    --secondary-gray: #D8DBE2;
+    --body-bg: #FFFFFF;
+}
+
+/* 
+Opacity for text should be 87%
+when used on black 
+*/
+
+/* End of variables */
+
+
 * {
     padding: 0;
     margin: 0;
@@ -7,7 +27,7 @@
 }
 html{
     font-size: 10px;
-    font-family: 'Space Mono', monospace;
+    font-family: "Work Sans", sans-serif;
     scroll-behavior: smooth;
 }
 a{
@@ -83,29 +103,43 @@ ul{
     left: 0;
     top: 0;
     width: 100vw;
-    height: auto;
+    height: 56px;
 }
 #header .header{
     min-height: 8vh;
-    background-color: black;
+    background-color: white;
     transition: 1.3s ease background-color;
+}
+#header .container{
+    height: 56px;
 }
 #header .nav-bar{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* Aligns items to the center of the header bar */
+    justify-content: center;
     width: 100%;
     height: 100%;
     max-width: 1300px;
     padding: 0 10px;
 }
+/* Highlight nav menu */
+#header .nav-list .nav-bar ul li.active{
+    background-color: var(--primary-color);
+    transition: 0.3 ease background-color;
+}
+#header .nav-list .nav-bar ul li.active a{
+    color: white;
+}
+
+
 #header .nav-list ul{
     list-style: none;
     position: absolute;
-    background-color: black;
+    background-color: white;
     width: 100vw;
     height: 100vh;
-    left: 100%;
+    /* left: 100%; */
     top: 0;
     display: flex;
     flex-direction: column;
@@ -123,7 +157,7 @@ ul{
     font-weight: 500;
     letter-spacing: .2rem;
     text-decoration: none;
-    color: lightgrey;
+    color: var(--secondary-black);
     text-transform: uppercase;
     padding: 20px;
     display: block;
@@ -146,7 +180,7 @@ ul{
     letter-spacing: initial;
 }
 #header .nav-list li:hover a{
-    color: #9dc5c3;
+    color: var(--primary-color);
 }
 #header .hamburger{
     z-index: 100;
@@ -165,7 +199,7 @@ ul{
     cursor: none;
 }
 #header .hamburger:hover{
-    background-color: #9dc5c3;
+    background-color: var(--primary-color);
 }
 #header .hamburger:after{
     position: absolute;
@@ -209,13 +243,13 @@ ul{
 }
 
 #header .brand h1:hover{
-    color: #9dc5c3;
+    color: var(--primary-color);
 }
 /* End of Header */
 
 /* Hero section */
 #hero{
-    background-color: black;
+    background-color: white;
     background-size: cover;
     background-position: top center;
     position: relative;
@@ -228,7 +262,7 @@ ul{
     top: 0;
     height: 100%;
     width: 100%;
-    background-color: black;
+    background-color: white;
     opacity: .1;
     z-index: -1;
 }
@@ -244,7 +278,7 @@ ul{
     font-size: 7rem;
     padding-left: 30px;
     position: relative;
-    color: white;
+    color: var(--secondary-black);
     margin-bottom: 10px;
 }
 #hero h2{
@@ -263,8 +297,46 @@ ul{
 }
 /* End of Hero Section */
 
-/* Career Section */
+/* New Career Section */
+
 #career .career{
+    flex-direction: column;
+    background-color: var(--primary-color);
+    text-align: center;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 100px 0;
+}
+#career .career-container{
+
+    width:100%;
+    margin: 0 auto;
+}
+
+.item{
+    background-color: var(--primary-color);
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px 0;
+    width: 500px;
+}
+.item h1{
+    margin-bottom: 20px;
+
+}
+.item p{
+    margin-bottom: 30px;
+    font-size: 10px;
+    color: white;
+}
+
+
+
+/* End of New Career Section */
+
+
+/* Old Career Section */
+/* #career .career{
     flex-direction: column;
     background-color: black;
     text-align: center;
@@ -275,11 +347,11 @@ ul{
 #career .career-top{
     margin: 0 auto;
     text-align: center;
-}
+} */
 /* #career .section-title{
     text-align: center;
 } */
-#career .career-bottom p{
+/* #career .career-bottom p{
     color: white;
     font-size: 1.4rem;
     margin-top: 5px;
@@ -384,7 +456,7 @@ ul{
     font-weight: 300;
     margin-bottom: 10px;
     letter-spacing: 2px;
-}
+} */
 
 /* End of Career Section */
 
@@ -455,8 +527,96 @@ ul{
 }
 /* End of Education Section */
 
+/* Introduction Section */
+
+#intro{
+    padding: 15rem 0;
+}
+#intro .section-title{
+    color: black;
+    letter-spacing: .2rem;
+}
+#intro .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+#intro .left{
+    padding: 2rem;
+    text-align: center;
+}
+#intro .left .card-intro{
+    box-shadow: 0px 0px 0px #121212;
+    padding: 3rem;
+    border-radius: 12px;
+    min-height: 400px;
+}
+
+#intro .left .card-intro .img{
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+}
+#intro .left .card-intro .img img{
+    object-fit: cover;
+}
+#intro .left .card-intro .card-desc{
+    /* color:  */
+    margin-bottom: 2rem;
+}
+#intro .left .card-intro .card-name{
+    font-size: 2rem;
+    margin-bottom: 0.2rem;
+}
+#intro .left .card-intro .card-sub-title{
+    font-size: 1.4rem;
+}
+
+#intro .subheading{
+    /* color: ; */
+    margin-bottom: 1rem;
+}
+#intro .right .slogan{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#intro .right .right-text{
+    /* color: ; */
+}
+/* Maybe make this global at some point lmao */
+#intro .buttons .outline{
+    background-color: transparent;
+    /* color: ; */
+    border-radius: 50px;
+    border: 2px solid ;
+    /* add color to the border */
+}
+
+@media only screen and (max-width:760px){
+    #intro .wrapper{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    #intro .right .column{
+        flex-direction: column;
+    }
+    #intro .right .button a{
+        width: 100%;
+        text-align: center;
+
+    }
+}
+
+
+/* End of Introduction Section */
+
+/* Deprecated About  */
 /* About Section */
-#about{
+/* #about{
     background-color: grey;
 }
 #about .about{
@@ -465,9 +625,9 @@ ul{
     max-width: 1200px;
     margin: 0 auto;
     padding: 100px 20px;
-}
+} */
 /* Repetitive or helpful? */
-#about .section-title{
+/* #about .section-title{
     font-size: 4rem;
     font-weight: 300;
     color: white;
@@ -504,7 +664,7 @@ ul{
 } 
 #about .col-right .cta:hover{
    border: 2px solid white;
-}   
+}    */
 
 /* End of About Section */
 
@@ -512,149 +672,44 @@ ul{
 
 #contact{
     padding: 10rem 0;
-    background-color: black;
+    background-color: white;
+}
+#contact .contact{
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: black;
+    width: 90%;
+}
+#contact h1{
+    color: black;
+}
+#contact .contact-bottom{
+    width: 100%;
+}
+#contact .contact-item {
+    width: 80%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 18px 0 #0000002c;
+    transition: 0.3s ease box-shadow;
 }
 #contact .section-title{
-    padding-bottom: 15px;
-    color: white;
+    padding-bottom: 5px;
+    color: var(--secondary-black);
     align-items: center;
 }
 #contact h2{
     color: white;
 }
-#contact .wrapper .left p{
-    color: white;
-}
-#contact .wrapper{
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 5rem;
-}
-#contact .wrapper #status{
-    flex-direction: column;
-    align-items: center;
-}
-#contact .wrapper .left,
-#contact .wrapper .right{
-    flex: 1;
-}
-/* Needs to be fixed lmao */
-#contact .wrapper .right{
-    /* height: 100vh;
-  width: 100%; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-#contact .left .contact-heading{
-    font-family: 'Space Mono';
-	font-size: 3rem;
-	margin-bottom: 1rem;
-    padding-bottom: 10px;
-}
-#contact .left .contact-desc{
-    color: black;
-    margin-bottom: 5rem;
-    align-items: center;
-}
-#contact .left .contact-info{
-    margin-bottom: 5rem;
-}
-#contact .right .form-wrapper{
-    background-color: white;
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 5rem;
-    border-radius: 12px;
-    color: white;
-}
-#contact .right .form-group{
-    margin-bottom: 1rem;
-}
-#contact .right .form-group label{
-    margin-bottom: 0.5rem;
-    display: inline-block;
-    font-size: 1.8rem;
-    color: black;
-}
-#contact .right .form-group .input-wrapper{
-    background-color: white;
-    color: black;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    height: 40px;
-    /* border-radius: 4px; Maybe for another day*/
-    overflow: hidden;
-    outline: solid black 1px;
-}
-#contact .right .form-group .input-wrapper .icon{
-    font-size: 2rem;
-    height: 100%;
-    width: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: lightgrey;
-}
-#contact .right .form-group .input-wrapper .icon:hover{
-    background-color: #9dc5c3;
-}
-#contact .right .form-group .input-wrapper input{
-    padding: 1rem;
-    height: 100%;
-    width: 100%;
-    outline: none;
-    border: none;
-    font-size: 1.8rem;
-    font-family: 'Space Mono', monospace;
-}
-#contact .right .form-group textarea{
-    width: 100%;
-    height: 250px;
-    resize: vertical;
-    padding: 1rem;
-    outline: none;
-    border-radius: 4px;
-    font-size: 2rem;
-    font-family: 'Space Mono', monospace;
-}
-#contact .right .form-wrapper button{
-    display: inline-block;
-    width: 150px;
-    font-size: 2rem;
-    text-transform: uppercase;
-    height: auto;
-    padding: 1rem 0;
-    font-family: 'Space Mono', monospace;
-    letter-spacing: 0.3rem;
-    border-radius: 8px;
-    outline: none;
-    border: none;
-}
-#contact .right .form-wrapper button:hover{
-    background-color: #9dc5c3;
-}
-#contact .right .form-wrapper #status{
-    width: 90%;
-    max-width: 500px;
-    text-align: center;
-    padding: 10px;
-    margin: 0 auto;
-    border-radius: 8px;
-}
-#contact .right .form-wrapper #status.success{
-    background-color: #9dc5c3;
-    animation: status 4s ease forwards;
-}
-#contact .right .form-wrapper #status.error{
-    background-color: rgb(255, 173, 173);
-    color:white;
-    animation: status 4s ease forwards;
-}
+/* what is this?? */
 @keyframes status{
     0%{
         opacity: 1;
@@ -669,35 +724,7 @@ ul{
         pointer-events: none;
     }
 }
-@media only screen and (max-width: 768px) {
-	#contact .wrapper {
-		flex-direction: column-reverse;
-		justify-content: center;
-		align-items: center;
-	}
-	#contact .right {
-		width: 100%;
-	}
-	#contact .right .form-wrapper {
-		padding: 3rem;
-		width: 100%;
-		max-width: 100%;
-    }
-    #contact .left{
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-    }
-}
-#contact .contact{
-    flex-direction: column;
-    max-width: 1200px;
-    margin: 0 auto;
-    color: black;
-}
-#contact h1{
-    color: black;
-}
+
 
 /* End of contact section */
 
@@ -807,61 +834,60 @@ ul{
 
 /* Footer */
 #footer{
-    background-color: black;
+    background-color: white;
 }
 #footer .footer{
-    min-height: 200px;
-    flex-direction: column;
+    min-height: 75px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     padding-top: 50px;
     padding-bottom: 10px;
-}
-#footer .brand{
-    text-align: center;
-}
-#footer h2{
-    color: white;
-    font-weight: 500;
-    font-size: 1.8rem;
-    letter-spacing: .1rem;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-#footer .social-icon{
-    display: flex;
-    padding-top: 10px;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-#footer .social-item-github{
-    background-color: white;  
-    margin: 0 5px;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px; 
-}
-#footer .social-item-github:hover img{
-    background-image: linear-gradient(60deg, #ec9f05 0%, #ff4e00 100%);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-}
-#footer .social-item-linkedin{
-    background-color: white;  
-    margin: 0 5px;
-    width: 50px;
-    height: 50px;
-    border-radius: 20%;
-}
-#footer .social-item-linkedin:hover img{
-    background-image: linear-gradient(60deg, #09c6f9 0%, #045de9 100%);
-    width: 50px;
-    height: 50px;
-    border-radius: 20%;
+    margin-right: 15px;
+    margin-left: 15px;
 }
 #footer p{
-    color: white;
+    color: black;
     font-size: 1.3rem;
 }
+
+#footer .footer .footer-left{
+    flex: 1;
+    align-items: left;
+    justify-content: left;
+    width: 100%;
+}
+
+#footer .footer .footer-center{
+    flex: 1;
+    text-align: center;
+
+}
+
+#footer .footer .footer-center .social-links{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#footer .footer .footer-center .social-links li a{
+    font-size: 20px;
+    line-height: 40px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    color: white;
+    border-radius: 100%;
+    outline: none;
+    background-color: var(--secondary-black);
+}
+
 /* End of Footer */
 
 /* ***************** Keyfames ******************** */
