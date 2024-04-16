@@ -504,8 +504,59 @@ ul{
 } 
 #about .col-right .cta:hover{
    border: 2px solid white;
-}   
+} 
 
+.dropbtn{
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: .1rem;
+    margin-top: 36px;
+    transition: .3s ease; 
+    transition-property: background-color, color;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    max-height: 160px ;
+    top: 100%;
+    font-size: 1.2rem;
+    overflow-y: scroll;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {background-color: lightgrey;}
 /* End of About Section */
 
 /* Contact section */
